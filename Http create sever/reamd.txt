@@ -1,0 +1,5 @@
+create a sever using "http " module 
+
+line no. 7 = we create a log variable that store "Date" and "req.url" (like -: "/about" , "/home");
+
+line no. 9 = create a file that name log.txt and used log variable , it will show information about url Request what user search on url and which time   

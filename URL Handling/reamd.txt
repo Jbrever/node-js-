@@ -1,0 +1,18 @@
+To work o url Hanling we require a url module ny npm "Url"
+
+url like this -: https://youtube.com/home?userid=1&a=2;
+            
+                 "https://" is a protocol
+                 "youtube.com" is a doamin name
+                 "/home" is a pathname
+                 "userid=1&a=2" is a query parameter
+
+line no. 8 = to remove "/favicon.ico" pathname and also from log file                
+
+line no. 7 = we create a log variable that store "Date" and "req.url" (like -: "/about" , "/home");
+
+line no. 9 = create a file that name log.txt and used log variable , it will show information about url Request what user search on url and which time 
+
+line no. 12 = "url.parse(req.url , true)" in these line "true" used to Work with query 
+
+line no. 16 = " const username = myUrl.query.username " if we don't define "true" value in above case so these will give error 

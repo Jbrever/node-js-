@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hello , just exloring myself </h1>
+
+    <input type="text" placeholder="write massages" class="inp">
+    <button class="btn">enter</button>
+
+</body>
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  const inp = document.querySelector('.inp')
+  const btn = document.querySelector('.btn')
+  const socket = io();  //important
+  
+  btn.addEventListener('click',(e)=>{
+         
+         const inpValue = inp.value;
+         console.log(inpValue)
+         socket.emit('user-message: ', inpValue) // used to send message to server 
+         inp.value =" ";
+         
+})
+
+
+</script>
+</html>
